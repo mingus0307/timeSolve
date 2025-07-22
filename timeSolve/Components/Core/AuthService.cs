@@ -7,21 +7,26 @@ using System.Threading.Tasks;
 namespace timeSolve.Components.Core
 {
     public class AuthService
-    {   //TODO: Build a proper Authentification with .NET Identity 
-        public bool IsLoggedIn { get; private set; } = false;
+    {
+        private bool _isLoggedIn;
 
-        public event Action? OnChange;
+        public bool IsLoggedIn => _isLoggedIn;
 
-        public void Login()
+        public Task<bool> LoginAsync(string username, string password)
         {
-            IsLoggedIn = true;
-            OnChange?.Invoke();
+            if (username == "admin" && password == "1234")
+            {
+                _isLoggedIn = true;
+                return Task.FromResult(true);
+            }
+
+            return Task.FromResult(false);
         }
 
         public void Logout()
         {
-            IsLoggedIn = false;
-            OnChange?.Invoke();
+            _isLoggedIn = false;
         }
     }
+
 }

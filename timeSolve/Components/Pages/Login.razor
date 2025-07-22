@@ -1,5 +1,7 @@
 ﻿@page "/login"
+@using timeSolve.Components.Core
 @inject NavigationManager Navigation
+@inject AuthService Auth
 
 <h3>Login</h3>
 
@@ -21,10 +23,10 @@
 
     private async Task HandleLogin()
     {
-        // Dummy-Login prüfen – später gegen richtigen AuthService tauschen
-        if (username == "admin" && password == "1234")
+        var success = await Auth.LoginAsync(username, password);
+
+        if (success)
         {
-            // Login erfolgreich → Weiterleitung zur Startseite
             Navigation.NavigateTo("/");
         }
         else
@@ -33,4 +35,3 @@
         }
     }
 }
-
