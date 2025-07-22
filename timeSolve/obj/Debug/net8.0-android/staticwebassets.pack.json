@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Soeren\\source\\repos\\timeSolve\\timeSolve\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\timeSolve.styles.css",
+      "PackagePath": "staticwebassets\\timeSolve.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Soeren\\source\\repos\\timeSolve\\timeSolve\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Soeren\\source\\repos\\timeSolve\\timeSolve\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Soeren\\source\\repos\\timeSolve\\timeSolve\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Soeren\\source\\repos\\timeSolve\\timeSolve\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Soeren\\source\\repos\\timeSolve\\timeSolve\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.build.timeSolve.props",
+      "PackagePath": "build\\timeSolve.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildMultiTargeting.timeSolve.props",
+      "PackagePath": "buildMultiTargeting\\timeSolve.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildTransitive.timeSolve.props",
+      "PackagePath": "buildTransitive\\timeSolve.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.timeSolve.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.timeSolve.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

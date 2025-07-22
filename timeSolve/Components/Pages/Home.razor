@@ -1,0 +1,70 @@
+﻿@page "/"
+
+
+<div class="timer">@displayText</div>
+
+<div class="control_btn">
+    <button @onclick="StartTimer">Start</button>
+    <button @onclick="PauseTimer">Pause</button>
+    <button @onclick="EndTimer">Ende</button>
+</div>
+
+@code {
+    private TimeSpan elapsedTime = TimeSpan.Zero;
+    private System.Timers.Timer timer;
+    private bool isRunning = false;
+    private DateTime startTime;
+    private string displayText = "00:00:00";
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        // Initialize the timer display
+        UpdateDisplay();
+    }
+
+    private void UpdateDisplay()
+    {
+        displayText = elapsedTime.ToString(@"hh\:mm\:ss");
+    }
+
+    private void StartTimer()
+    {
+        if (!isRunning)
+        {
+            startTime = DateTime.Now -  elapsedTime; // Store the current elapsed time as the start time
+            isRunning = true;
+
+            timer = new System.Timers.Timer(1000); // Update every second
+            timer.Elapsed += (sender, e) =>
+            {
+                if (isRunning)
+                {
+                    elapsedTime = DateTime.Now - startTime;
+                    UpdateDisplay();
+                    InvokeAsync(StateHasChanged); // Ensure UI updates
+                }
+            };
+            timer.Start();
+            
+        }
+    }
+    private void PauseTimer()
+    {
+        if (isRunning)
+        {
+            
+            isRunning = false;
+            UpdateDisplay();
+        }
+    }
+    private void EndTimer()
+    {
+        if (isRunning)
+        {
+            PauseTimer();
+        }
+        // Logic to save the elapsed time can be added here
+    }
+}
+
